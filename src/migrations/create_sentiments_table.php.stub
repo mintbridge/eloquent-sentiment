@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateSentimentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('sentiments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->morphs('sentimentable');
+            $table->integer('user_id')->nullable();
+            $table->string('sentiment');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down()
+    {
+        Schema::drop('sentiments');
+    }
+}

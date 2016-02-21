@@ -1,0 +1,37 @@
+{
+    "name": "mintbridge/eloquent-sentiment",
+    "description": "An eloquent package for adding sentiment to eloquent models.",
+    "keywords": ["eloquent", "sentiment", "emoticon", "laravel"],
+    "license": "MIT",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Dixon",
+            "email": "paul.dixon@mintbridge.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/database": "5.*",
+        "illuminate/support": "5.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "4.2.*",
+        "scrutinizer/ocular": "^1.1"
+    },
+    "suggest": {
+        "illuminate/support": "Required for Laravel support"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mintbridge\\EloquentSentiment\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mintbridge\\EloquentSentiment\\Test\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}
